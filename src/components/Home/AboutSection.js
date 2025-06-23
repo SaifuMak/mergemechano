@@ -59,7 +59,7 @@ export default function AboutSection() {
     <Image
       src="/images/about.jpg"
       alt="About"
-      className="object-cover w-full h-full rounded-2xl"
+      className="object-cover w-full h-full rounded-2xl "
       fill
     />
   </div>
