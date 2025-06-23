@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
         
         {/* Logo */}
         <div className="w-[150px]">
-          <a href="/">
+          <Link href="/">
             <Image
               src="/images/logo.webp"
               alt="Logo"
@@ -16,7 +17,7 @@ export default function Header() {
               height={40}
               priority
             />
-          </a>
+          </Link>
         </div>
 
         {/* Search Box */}
@@ -31,12 +32,12 @@ export default function Header() {
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-6 text-base font-medium">
-          <a href="/" className="hover:text-blue-600">Home</a>
-          <a href="/about" className="hover:text-blue-600">About</a>
-          <a href="/products" className="hover:text-blue-600">Products</a>
-          <a href="/distributors" className="hover:text-blue-600">Distributors</a>
-          <a href="/gallery" className="hover:text-blue-600">Gallery</a>
-          <a href="/contact" className="hover:text-blue-600">Contact</a>
+          <Link href="/" className="hover:text-blue-600">Home</Link>
+          <Link href="/about" className="hover:text-blue-600">About</Link>
+          <Link href="/products" className="hover:text-blue-600">Products</Link>
+          <Link href="/distributors" className="hover:text-blue-600">Distributors</Link>
+          <Link href="/gallery" className="hover:text-blue-600">Gallery</Link>
+          <Link href="/contact" className="hover:text-blue-600">Contact</Link>
         </nav>
       </div>
     </header>
