@@ -38,9 +38,9 @@ export default function ProductsSection() {
             <h3 className="text-base font-semibold text-gray-700 mb-3">{product.name}</h3>
             <Link
               href={`/products/${product.slug}`}
-              className="mt-3 mb-3 inline-block bg-gray-700 text-white text-sm px-5 py-2 rounded-full hover:bg-red-700 transition"
+              className="mt-2 mb-4 inline-block text-black text-sm rounded-full"
             >
-              View More
+              READ MORE
             </Link>
           </div>
         ))}
