@@ -34,7 +34,7 @@ export default function FeatureCapsules() {
             <div className="flex-1 pr-4">
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600 mb-4 text-sm">{feature.description}</p>
-              <button className="bg-black mt-5 text-white px-4 py-2 rounded-full text-sm hover:bg-red-700 transition">
+              <button className="mt-3 text-black py-2 rounded-full text-sm">
                 {feature.buttonText}
               </button>
             </div>

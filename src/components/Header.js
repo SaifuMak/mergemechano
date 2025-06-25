@@ -12,7 +12,7 @@ export default function Header() {
         <div className="w-[150px]">
           <Link href="/">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo.png"
               alt="Logo"
               width={150}
               height={40}

@@ -14,7 +14,7 @@ export default function ProductsSection() {
   ]
 
   return (
-    <section className="bg-gray-100 py-16 px-4">
+    <section className="bg-gray-100 py-16 px-4 bg-cover bg-center bg-no-repeat" >
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800">Featured Products</h2>
         <p className="text-gray-600 mt-2 text-sm">Check out some of our top-selling equipment</p>
