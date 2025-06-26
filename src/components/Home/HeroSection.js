@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const images = [
-  '/images/hero1.jpg',
-  '/images/hero2.jpg',
-  '/images/hero3.jpg',
+  '/images/machine-1.png',
+  '/images/machine-2.png',
+  '/images/machine-1.png',
   // Replace or add more image paths if needed
 ]
 
@@ -15,15 +15,15 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 4000)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
 
   return (
     <section
-  className="w-full h-auto bg-cover bg-center"
+  className="w-full h-2/3 pt-16 pb-10 bg-cover bg-center"
   style={{
-    backgroundImage: "url('/images/black-bg.jpg')", // path from public folder
+    backgroundImage: "url('/images/home-bg3.jpg')", // path from public folder
   }}
 >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 py-16 gap-10">
@@ -44,15 +44,17 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image */}
-        <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px]">
-          <Image
-            src="/images/machine-1.png" // your uploaded machine image path
-            alt="Machine"
-            fill
-            className="object-contain transition-opacity duration-1000"
-            priority
-          />
-        </div>
+          <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px]">
+            <Image
+              key={images[currentIndex]} // triggers re-render on image change
+              src={images[currentIndex]}
+              alt="Machine"
+              fill
+              className="object-contain transition-opacity duration-1000 opacity-0 animate-fadeIn"
+              priority
+            />
+          </div>
+
       </div>
     </section>
   )

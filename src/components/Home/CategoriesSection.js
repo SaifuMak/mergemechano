@@ -26,7 +26,10 @@ export default function CategoriesSection() {
   ]
 
   return (
-    <section className="bg-white py-16 px-4 pt-25 pb-10">
+    <section className=" py-16 px-4 pt-25 pb-10 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: " url('/images/stripe-b.jpg')",
+      }}>
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800">Popular Categories</h2>
         <p className="text-gray-500 mt-2 text-sm">
