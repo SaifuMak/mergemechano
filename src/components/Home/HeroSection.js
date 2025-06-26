@@ -45,15 +45,14 @@ export default function HeroSection() {
 
         {/* Right Image */}
           <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px]">
-            <Image
-              key={images[currentIndex]} // triggers re-render on image change
-              src={images[currentIndex]}
-              alt="Machine"
-              fill
-              className="object-contain transition-opacity duration-1000 opacity-0 animate-fadeIn"
-              priority
-            />
-          </div>
+          <Image
+            src="/images/machine-1.png" // your uploaded machine image path
+            alt="Machine"
+            fill
+            className="object-contain transition-opacity duration-1000"
+            priority
+          />
+        </div>
 
       </div>
     </section>
