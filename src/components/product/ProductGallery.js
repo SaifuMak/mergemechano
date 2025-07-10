@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const images = [
-  '/images/cat1.png',
+  '/images/products/product1.jpg',
   '/images/cat2.png',
   '/images/cat3.png',
   '/images/cat4.png',
@@ -16,12 +16,12 @@ export default function ProductGallery() {
   return (
     <div>
       {/* Main Image */}
-      <div className="w-full overflow-hidden rounded-xl border mb-4 group">
+      <div className="w-full overflow-hidden rounded-xl border border-gray-300 mb-4 group">
         <Image
           src={selectedImage}
           alt="Product"
           width={600}
-          height={500}
+          height={600}
           className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
         />
       </div>
