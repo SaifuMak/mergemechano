@@ -45,18 +45,49 @@ export default function AddProductPage() {
     setFormData((prev) => ({ ...prev, [key]: value }))
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const payload = { ...formData, specs }
-    console.log('Submitting product:', payload)
+ 
 
-    // TODO: POST to your API
-    // await fetch('/api/products', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(payload),
-    // })
+  const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  const payload = {
+    name: formData.name,
+    series: formData.series,
+    voltage: formData.voltage,
+    power: formData.power,
+    description: formData.description,
+    catalogLink: formData.catalogLink,
+    slug: formData.slug,
+    categories: formData.categories,
+    specs: specs
   }
+  console.log('Submitting product:', payload)
+
+  try {
+    const response = await fetch('http://127.0.0.1:8000/api/products/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+
+    if (!response.ok) {
+      const error = await response.json()
+      console.error('Server error:', error)
+      throw new Error('Failed to save product')
+    }
+
+    const result = await response.json()
+    console.log('✅ Product saved:', result)
+    alert('Product added successfully!')
+    // Optionally reset form here
+  } catch (err) {
+    console.error('❌ Submission error:', err)
+    alert('Error submitting product')
+  }
+}
+
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
