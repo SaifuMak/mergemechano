@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function ProductCard({ product }) {
-  const imageUrl = product.images?.[0] || '/images/placeholder.jpg'
+  const imageUrl = product.images?.[0] || '/images/products/default-image.jpg'
 
   return (
     <div className="bg-white border border-gray-200 p-4 rounded-lg shadow-sm">
