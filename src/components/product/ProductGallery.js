@@ -10,8 +10,9 @@ const images = [
   '/images/cat4.png',
 ]
 
-export default function ProductGallery() {
-  const [selectedImage, setSelectedImage] = useState(images[0])
+export default function ProductGallery({ images = [] }) {
+  const [selectedImage, setSelectedImage] = useState(images[0] || '/images/products/default-image.jpg')
+
 
   return (
     <div>

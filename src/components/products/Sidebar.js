@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 const categories = [
-  { name: 'Dent Pullers', slug: 'dent-pullers' },
+  { name: 'Dent Puller', slug: 'dent-pullers' },
   { name: 'Battery Chargers', slug: 'battery-chargers' },
-  { name: 'Waste Oil Collectors', slug: 'waste-oil-collectors' },
+  { name: 'Mig Welding', slug: 'mig-welding' },
   { name: 'Accessories', slug: 'accessories' },
 ]
 
