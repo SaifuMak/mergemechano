@@ -1,13 +1,24 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
 
 export default function ProductGrid() {
-  const products = [
-    { name: 'Dent Puller Pro 2000', slug: 'dent-puller-pro-2000' },
-    { name: 'Heavy Battery Charger', slug: 'heavy-battery-charger' },
-    { name: 'Oil Waste Collector XL', slug: 'oil-waste-collector-xl' },
-    { name: 'Smart Garage Kit', slug: 'smart-garage-kit' },
-    // Add more as needed
-  ]
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const res = await fetch('https://mechano.makseotools.com/api/products/')
+        const data = await res.json()
+        setProducts(data)
+      } catch (error) {
+        console.error('Failed to fetch products:', error)
+      }
+    }
+
+    fetchProducts()
+  }, [])
 
   return (
     <section className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
