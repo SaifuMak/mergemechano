@@ -64,7 +64,7 @@ export default function AddProductPage() {
   console.log('Submitting product:', payload)
 
   try {
-    const response = await fetch('https://merge.makseotools.com/api/products/', {
+    const response = await fetch('https://mechano.makseotools.com/api/products/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
