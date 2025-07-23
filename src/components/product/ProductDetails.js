@@ -27,16 +27,7 @@ export default function ProductDetails({ product }) {
       </div>
     </div>
 
-
       <p className="text-gray-600 mt-3 mb-4">{product.description}</p>
-
-  {/* Top Features here. */}
-<ul className="mb-6 text-sm text-gray-700 space-y-1">
-  {product.topfeatures.map((feature, i) => (
-    <li key={i}> - {feature.value}</li>
-  ))}
-</ul>
-
 
 
 <Image
@@ -51,7 +42,7 @@ export default function ProductDetails({ product }) {
       {/* Buttons */}
       <div className="flex gap-4">
         <Link
-          href={product.catalogueUrl}
+          href={product.catalogueUrl || '#'}
           target="_blank"
           className="bg-gray-800 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-gray-900 transition"
         >

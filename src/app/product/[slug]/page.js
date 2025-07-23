@@ -18,9 +18,13 @@ export default async function ProductPage({ params }) {
   const product = await getProduct(params.slug)
 
   const specContent = {
-    paragraph: product.description,
-    table: product.specs,
-  }
+  paragraph: product.description || '',
+  table: product.specs.map(spec => ({
+    feature: spec.name,
+    value: spec.value,
+  })),
+}
+
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-16">
