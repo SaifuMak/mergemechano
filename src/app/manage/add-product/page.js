@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const categories = ['Welding', 'Cutting', 'Automation', 'Accessories']
+const categories = ['Dent Puller', 'Mig Welding', 'Battery Charger', 'Accessories', 'Spot Puller']
 
 export default function AddProductPage() {
   const [specs, setSpecs] = useState([{ name: '', value: '' }])
@@ -15,6 +15,9 @@ export default function AddProductPage() {
     catalogLink: '',
     slug: '',
     categories: [],
+    images: '',
+    metaTitle: '',
+    metaDescription: '',
   })
 
   const handleSpecChange = (index, key, value) => {
@@ -45,55 +48,54 @@ export default function AddProductPage() {
     setFormData((prev) => ({ ...prev, [key]: value }))
   }
 
- 
-
   const handleSubmit = async (e) => {
-  e.preventDefault()
+    e.preventDefault()
 
-  const payload = {
-    name: formData.name,
-    series: formData.series,
-    voltage: formData.voltage,
-    power: formData.power,
-    description: formData.description,
-    catalogLink: formData.catalogLink,
-    slug: formData.slug,
-    categories: formData.categories,
-    specs: specs
-  }
-  console.log('Submitting product:', payload)
-
-  try {
-    const response = await fetch('https://mechano.makseotools.com/api/products/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    })
-
-    if (!response.ok) {
-      const error = await response.json()
-      console.error('Server error:', error)
-      throw new Error('Failed to save product')
+    const payload = {
+      name: formData.name,
+      series: formData.series,
+      voltage: formData.voltage,
+      power: formData.power,
+      description: formData.description,
+      catalogLink: formData.catalogLink,
+      slug: formData.slug,
+      categories: formData.categories,
+      specs: specs,
+      images: formData.images.split(',').map((url) => url.trim()),
+      metaTitle: formData.metaTitle,
+      metaDescription: formData.metaDescription,
     }
 
-    const result = await response.json()
-    console.log('✅ Product saved:', result)
-    alert('Product added successfully!')
-    // Optionally reset form here
-  } catch (err) {
-    console.error('❌ Submission error:', err)
-    alert('Error submitting product')
-  }
-}
+    console.log('Submitting product:', payload)
 
+    try {
+      const response = await fetch('https://mechano.makseotools.com/api/products/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        console.error('Server error:', error)
+        throw new Error('Failed to save product')
+      }
+
+      const result = await response.json()
+      console.log('✅ Product saved:', result)
+      alert('Product added successfully!')
+    } catch (err) {
+      console.error('❌ Submission error:', err)
+      alert('Error submitting product')
+    }
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
       <h1 className="text-2xl font-bold mb-6">Add New Product</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
-
         {/* Text Inputs */}
         {[
           ['Product Name', 'name'],
@@ -102,6 +104,7 @@ export default function AddProductPage() {
           ['Power Output', 'power'],
           ['Catalog PDF Link', 'catalogLink'],
           ['Product Slug', 'slug'],
+          ['Meta Title', 'metaTitle'],
         ].map(([label, key]) => (
           <div key={key}>
             <label className="block font-medium mb-1">{label}</label>
@@ -116,11 +119,36 @@ export default function AddProductPage() {
 
         {/* Description */}
         <div>
-          <label className="block font-medium mb-1">Small Description & Bullet Points (HTML allowed)</label>
+          <label className="block font-medium mb-1">
+            Small Description & Bullet Points (HTML allowed)
+          </label>
           <textarea
             value={formData.description}
             onChange={(e) => handleChange('description', e.target.value)}
             className="w-full border border-gray-300 rounded px-3 py-2 h-32"
+          />
+        </div>
+
+        {/* Meta Description */}
+        <div>
+          <label className="block font-medium mb-1">Meta Description</label>
+          <textarea
+            value={formData.metaDescription}
+            onChange={(e) => handleChange('metaDescription', e.target.value)}
+            className="w-full border border-gray-300 rounded px-3 py-2 h-24"
+          />
+        </div>
+
+        {/* Images Field */}
+        <div>
+          <label className="block font-medium mb-1">
+            Image URLs (comma separated)
+          </label>
+          <textarea
+            placeholder="/images/products/a.jpg, /images/products/b.jpg"
+            value={formData.images}
+            onChange={(e) => handleChange('images', e.target.value)}
+            className="w-full border border-gray-300 rounded px-3 py-2 h-24"
           />
         </div>
 
