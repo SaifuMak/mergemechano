@@ -10,7 +10,7 @@ export default function ContactInfo() {
 
       {/* Description */}
       <p className="text-gray-600 max-w-xl">
-        Reach out to our distributors for any inquiries, assistance, or information regarding our products and services. We're here to support you.
+        Reach out to our distributors for any inquiries, assistance, or information regarding our products and services. We are here to support you.
       </p>
 
       {/* Button */}

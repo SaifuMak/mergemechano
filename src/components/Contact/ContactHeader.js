@@ -15,7 +15,8 @@ export default function ContactHeader() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
         {/* Heading */}
         <div className="mb-10">
-          <h1 className="text-4xl font-bold mb-2">Let's <span className="text-red-500">Talk</span> Now</h1>
+          <h1 className="text-4xl font-bold mb-2">Let&apos;s <span className="text-red-500">Talk</span> Now</h1>
+
           <p className="text-lg text-gray-200 max-w-lg">
             Contact us using your preferred method and let us start helping to deliver your plans.
           </p>
