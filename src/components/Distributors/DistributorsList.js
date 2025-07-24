@@ -18,11 +18,11 @@ export default function DistributorsList({ distributors }) {
             {d.name}
           </h3>
           <div className="flex items-center text-sm text-gray-600 gap-2">
-            <MapPinIcon className="h-4 w-4 text-gray-500" />
+            <MapPinIcon className="h-4 w-4 text-red-600" />
             {d.location}
           </div>
           <div className="flex items-center text-sm text-gray-500 mt-2">
-            <PhoneIcon className="h-4 w-4 mr-2" />
+            <PhoneIcon className="h-4 w-4 mr-2 text-red-600" />
             +91 9192 156 657
           </div>
         </div>

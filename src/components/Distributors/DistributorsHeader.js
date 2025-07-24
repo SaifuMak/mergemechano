@@ -1,10 +1,10 @@
 export default function DistributorsHeader() {
   return (
-    <section className="relative w-full h-36 md:h-40 bg-gray-900 text-white overflow-hidden">
+    <section className="relative w-full h-56 md:h-56 bg-gray-900 text-white overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: `url('/images/distributors-banner.jpg')` }}
+        style={{ backgroundImage: `url('/images/distributors-1.jpg')` }}
       />
 
       {/* Overlay Text */}
