@@ -3,7 +3,14 @@
 import { useState } from 'react'
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    locationState: '',
+    subject: '',
+    message: '',
+  })
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -22,6 +29,7 @@ export default function ContactForm() {
     >
       <h2 className="text-lg font-bold text-gray-900">Send us a message</h2>
 
+      {/* Name */}
       <input
         name="name"
         placeholder="Your Name"
@@ -31,16 +39,47 @@ export default function ContactForm() {
         className="w-full border border-gray-300 rounded px-4 py-2"
       />
 
+      {/* Email + Phone - Responsive Two Column Layout */}
+<div className="flex flex-wrap md:flex-nowrap gap-4">
+  <input
+    name="email"
+    type="email"
+    placeholder="Your Email"
+    required
+    value={form.email}
+    onChange={handleChange}
+    className="w-full md:w-1/2 border border-gray-300 rounded px-4 py-2"
+  />
+  <input
+    name="phone"
+    type="tel"
+    placeholder="Your Phone"
+    value={form.phone}
+    onChange={handleChange}
+    className="w-full md:w-1/2 border border-gray-300 rounded px-4 py-2"
+  />
+</div>
+
+
+      {/* Location + State Combined */}
       <input
-        name="email"
-        type="email"
-        placeholder="Your Email"
-        required
-        value={form.email}
+        name="locationState"
+        placeholder="Your Location & State"
+        value={form.locationState}
         onChange={handleChange}
         className="w-full border border-gray-300 rounded px-4 py-2"
       />
 
+      {/* Subject */}
+      <input
+        name="subject"
+        placeholder="Subject"
+        value={form.subject}
+        onChange={handleChange}
+        className="w-full border border-gray-300 rounded px-4 py-2"
+      />
+
+      {/* Message */}
       <textarea
         name="message"
         placeholder="Your Message"

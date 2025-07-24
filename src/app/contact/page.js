@@ -1,6 +1,7 @@
 import ContactHeader from '@/components/Contact/ContactHeader'
 import ContactInfo from '@/components/Contact/ContactInfo'
 import ContactForm from '@/components/Contact/ContactForm'
+import MapSection from '@/components/Contact/MapSection'
 
 export default function ContactPage() {
   return (
@@ -10,6 +11,7 @@ export default function ContactPage() {
         <ContactInfo />
         <ContactForm />
       </section>
+      <MapSection />
     </main>
   )
 }

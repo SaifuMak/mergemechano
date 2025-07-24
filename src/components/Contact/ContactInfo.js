@@ -1,41 +1,36 @@
-import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-6 text-gray-700">
-      <div>
-        <h2 className="text-xl font-bold mb-2">The Office</h2>
-        <div className="flex items-start gap-2">
-          <MapPinIcon className="h-6 w-6 text-red-600 mt-1" />
-          <address className="not-italic leading-relaxed">
-            446A, MERGE MECHANO COMPLEX,<br />
-            KUMBALANGADU,<br />
-            KANJIRAKODE P O,<br />
-            WADAKKANCHERY MUNICIPALITY,<br />
-            THRISSUR, KERALA, INDIA, 680590
-          </address>
-        </div>
-      </div>
+    <section className="max-w-3xl mx-auto px-6 py-16 flex flex-col items-start text-left space-y-6">
+      
+      {/* Heading */}
+      <h2 className="text-3xl font-bold text-gray-900">Find a Distributor</h2>
 
-      <div className="flex items-center gap-2">
-        <PhoneIcon className="h-5 w-5 text-red-600" />
-        <span>04884 234090, 7736388467</span>
-      </div>
+      {/* Description */}
+      <p className="text-gray-600 max-w-xl">
+        Reach out to our distributors for any inquiries, assistance, or information regarding our products and services. We're here to support you.
+      </p>
 
-      <div className="flex items-center gap-2">
-        <EnvelopeIcon className="h-5 w-5 text-red-600" />
-        <a href="mailto:info@mergemechano.com" className="underline">
-          info@mergemechano.com
-        </a>
-      </div>
+      {/* Button */}
+      <Link
+        href="/distributors"
+        className="inline-block bg-red-700 text-white px-6 py-2 rounded-full font-medium hover:bg-red-800 transition"
+      >
+        Distributors
+      </Link>
 
-      <div className="flex items-start gap-2">
-        <ClockIcon className="h-5 w-5 text-red-600 mt-1" />
-        <div>
-          <p>Monday - Saturday: 9:00 AM – 5:00 PM</p>
-          <p>Sunday: Closed</p>
-        </div>
+      {/* Image */}
+      <div className="w-full max-w-md">
+        <Image
+          src="/images/find-dealer.jpg"
+          alt="Merge Mechano Office"
+          width={600}
+          height={400}
+          className="w-full h-auto rounded-xl object-cover shadow-md"
+        />
       </div>
-    </div>
+    </section>
   )
 }
