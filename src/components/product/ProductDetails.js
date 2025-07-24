@@ -8,26 +8,43 @@ export default function ProductDetails({ product }) {
     <div>
       <h1 className="font-bold text-gray-900 mb-4 leading-snug">
        <span className="text-4xl text-red-700 block">{product.name}</span>
-       <span className="block text-2xl">{product.name2}</span> 
+       <span className="block text-2xl">{product.series}</span> 
       </h1>
 
 
-      <button className="border border-gray-400 rounded-full bg-white text-gray-500 text-sm px-3 py-1">
-  DENT PULLER
-</button>
+      {product.categories?.map((category, index) => (
+  <button
+    key={index}
+    className="border border-gray-400 rounded-full bg-white text-gray-500 text-sm px-3 py-1 mr-2 mb-2"
+  >
+    {category}
+  </button>
+))}
+
 
 <div className="flex items-center bg-white text-black  py-2 space-x-6 text-sm w-auto mt-3 ">
       <div className="flex items-center space-x-2">
         <PowerIcon className="h-5 w-5 text-gray-700" />
-        <span>230V</span>
+        <span>{product.voltage}</span>
       </div>
       <div className="flex items-center space-x-2">
         <BoltIcon className="h-5 w-5 text-gray-700" />
-        <span>3200A</span>
+        <span>{product.power}</span>
       </div>
     </div>
 
-      <p className="text-gray-600 mt-3 mb-4">{product.description}</p>
+      <div
+  className="text-gray-600 mt-3 mb-4
+             [&_li]:before:content-['-'] 
+             [&_li]:before:mr-2 
+             [&_li]:before:text-gray-500 
+             [&_ul]:mt-3"
+  dangerouslySetInnerHTML={{ __html: product.description }}
+/>
+
+
+
+
 
 
 <Image
