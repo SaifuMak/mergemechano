@@ -17,7 +17,7 @@ export default function ProductGallery({ images = [] }) {
   return (
     <div>
       {/* Main Image */}
-      <div className="w-full overflow-hidden rounded-xl border border-gray-300 mb-4 group">
+      <div className="w-full  overflow-hidden rounded-xl border border-gray-300 mb-4 group">
         <Image
           src={selectedImage}
           alt="Product"

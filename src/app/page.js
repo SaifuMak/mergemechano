@@ -5,12 +5,14 @@ import CategoriesSection from '@/components/Home/CategoriesSection'
 import ProductsSection from '@/components/Home/ProductsSection'
 import WhyChooseUsSection from '@/components/Home/WhyChooseUsSection'
 import DistributorSection from '@/components/Home/DistributorSection'
+import ProductCategories from '@/components/Home/ProductCategories'
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
-       <FeatureCapsules />
+       {/* <FeatureCapsules /> */}
+       <ProductCategories/>
        <AboutSection />
        <CategoriesSection />
        <WhyChooseUsSection />
