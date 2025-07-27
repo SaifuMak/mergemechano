@@ -63,14 +63,14 @@ export default function ProductDetails({ product }) {
           target="_blank"
           className="bg-gray-800 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-gray-900 transition"
         >
-          Catalog PDF
+          Brochure PDF
         </Link>
-        <Link
+        {/* <Link
           href="/distributors"
           className="bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-red-700 transition"
         >
           Find a Dealer
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

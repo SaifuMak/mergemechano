@@ -29,7 +29,9 @@ export default function ContactHeader() {
             <EnvelopeIcon className="h-6 w-6 text-red-500" />
             <div>
               <p className="font-medium text-white">Shoot us an email</p>
-              <p className="text-gray-300 text-sm">info@mergemechano.com</p>
+              <a href="mailto:info@mergemechano.com" className="text-gray-300 text-sm ">
+                info@mergemechano.com
+              </a>
             </div>
           </div>
 
@@ -38,7 +40,8 @@ export default function ContactHeader() {
             <PhoneIcon className="h-6 w-6 text-red-500" />
             <div>
               <p className="font-medium text-white">Phone Call</p>
-              <p className="text-gray-300 text-sm">04884 234090, 7736388467</p>
+              <a href="tel:04884234090">04884 234090</a>,{' '}
+              <a href="tel:7736388467">7736388467</a>
             </div>
           </div>
 

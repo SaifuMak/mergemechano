@@ -32,12 +32,11 @@ export default function ProductCategories({setActiveCategory,setShowCategoryOver
     const handleCategoryOverview=(category)=>{
         setActiveCategory(category)
         setShowCategoryOverviewModal(true)
-        
     }
 
 
     return (
-        <section className="-mt-16 pb-10 px-4 relative z-10">
+        <section className="-mt-16 pb-20 px-4 relative z-10">
             <div className=" w-11/12 2xl:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
 
                 {categories.map((category, index) => (

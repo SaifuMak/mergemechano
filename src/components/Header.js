@@ -19,33 +19,33 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4 gap-6">
 
           {/* Logo */}
-          <div className="w-[150px]">
+          <div className="w-[160px]  ">
             <Link href="/">
               <Image
                 src="/images/logo.png"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={180}
+                height={60}
                 priority
               />
             </Link>
           </div>
 
           {/* Desktop Search Box */}
-          <div className="flex-1 max-w-md w-full relative hidden md:block">
+          {/* <div className="flex-1 max-w-md w-full relative hidden md:block">
             <input
               type="text"
               placeholder="Search products..."
               className="w-full border border-gray-300 rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <MagnifyingGlassIcon className="w-5 h-5 text-gray-500 absolute right-3 top-2.5" />
-          </div>
+          </div> */}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6 text-base font-medium">
             <Link href="/" className="hover:text-blue-600">Home</Link>
             <Link href="/about" className="hover:text-blue-600">About</Link>
-            <Link href="/products" className="hover:text-blue-600">Products</Link>
+            {/* <Link href="/products" className="hover:text-blue-600">Products</Link> */}
             <Link href="/distributors" className="hover:text-blue-600">Distributors</Link>
             <Link href="/gallery" className="hover:text-blue-600">Gallery</Link>
             <Link href="/contact" className="hover:text-blue-600">Contact</Link>
@@ -69,7 +69,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Search Input - Smooth Toggle */}
-        <div
+        {/* <div
           className={`transition-all duration-300 ease-in-out overflow-hidden px-4 ${
             isSearchOpen ? 'max-h-24 opacity-100 pb-4' : 'max-h-0 opacity-0'
           }`}
@@ -79,7 +79,7 @@ export default function Header() {
             placeholder="Search products..."
             className="w-full border border-gray-300 rounded-full py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-        </div>
+        </div> */}
       </header>
 
       {/* Full-Screen Mobile Menu with Animation */}
@@ -114,7 +114,7 @@ export default function Header() {
           <nav className="flex flex-col space-y-5 text-lg font-medium">
             <Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link href="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link href="/products" onClick={() => setIsMenuOpen(false)}>Products</Link>
+            {/* <Link href="/products" onClick={() => setIsMenuOpen(false)}>Products</Link> */}
             <Link href="/distributors" onClick={() => setIsMenuOpen(false)}>Distributors</Link>
             <Link href="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
             <Link href="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
