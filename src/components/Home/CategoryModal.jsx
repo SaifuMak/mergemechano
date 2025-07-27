@@ -9,7 +9,6 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
     const category = categories.find(cat => cat?.name.toLowerCase().trim() === activeCategory?.toLowerCase().trim());
     const categorySlug = category ? category.slug : '#';
 
-
     const subCategories = [
         {
             title: 'Machines',
@@ -33,7 +32,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
         <>
             {showCategoryOverviewModal && (
                 <div onClick={() => setShowCategoryOverviewModal(false)} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-                    <div onClick={(e) => e.stopPropagation()} className="bg-white  transition-all duration-300 ease-out  p-16 rounded-xl w-full max-w-6xl relative overflow-y-auto max-h-[90vh]  min-h-[60vh]">
+                    <div onClick={(e) => e.stopPropagation()} className="bg-white  transition-all duration-300 ease-out p-10 md:p-16 rounded-xl w-10/12 md:w-full md:max-w-4xl xl:max-w-6xl relative overflow-y-auto max-h-[90vh]  min-h-[60vh]">
                         {/* Close button */}
                         <button
                             onClick={() => setShowCategoryOverviewModal(false)}
@@ -62,7 +61,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
                                             src={subCategory.image}
                                             alt={subCategory.title}
                                             width={200}
-                                            height={0}
+                                            height={200}
                                             className="w-full h-auto rounded-lg transition-all duration-700 ease-in-out hover:scale-105"
                                         />
                                     </div>

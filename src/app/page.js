@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import HeroSection from '@/components/Home/HeroSection'
 import FeatureCapsules from '@/components/Home/FeatureCapsules'
@@ -18,8 +18,19 @@ export default function Home() {
   const [showCategoryOverviewModal, setShowCategoryOverviewModal] = useState(false)
   const [activeCategory, setActiveCategory] = useState(null)
 
+   useEffect(() => {
+    if (showCategoryOverviewModal) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [showCategoryOverviewModal])
+
   return (
-    <div>
+    <div className=''>
       <HeroSection />
       {/* <FeatureCapsules /> */}
       <ProductCategories setActiveCategory={setActiveCategory} setShowCategoryOverviewModal={setShowCategoryOverviewModal} />
