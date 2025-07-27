@@ -11,7 +11,6 @@ export default function ProductDetails({ product }) {
         <span className="block text-2xl">{product.series}</span>
       </h1>
 
-
       {product.categories?.map((category, index) => (
         <button
           key={index}
@@ -41,19 +40,27 @@ export default function ProductDetails({ product }) {
              [&_ul]:mt-3"
         dangerouslySetInnerHTML={{ __html: product.description }}
       />
-
-
-
-
-
-
+      
       <Image
         src="/images/products/certifications.jpg"
         alt="About Merge Mechano"
         width={300}
         height={300}
-        className="w-[300px] h-auto object-contain border-gray-300 rounded-4xl mb-10"
+        className="w-[420px] overflow-hidden h-32  object-contain border-gray-300 rounded-4xl mb-10"
       />
+
+  
+      {/* <div className="w-[400px] h-[200px] relative border overflow-hidden rounded-4xl">
+        <Image
+          src="/images/products/certifications.jpg"
+          alt="About Merge Mechano"
+          fill
+          className="object-cover"
+        />
+      </div>
+ */}
+
+
 
 
       {/* Buttons */}
