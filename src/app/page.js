@@ -23,11 +23,11 @@ export default function Home() {
       <HeroSection />
       {/* <FeatureCapsules /> */}
       <ProductCategories setActiveCategory={setActiveCategory} setShowCategoryOverviewModal={setShowCategoryOverviewModal} />
-      <AboutSection />
-      <CategoriesSection />
-      <WhyChooseUsSection />
-      <ProductsSection />
-      <DistributorSection />
+      {/* <AboutSection /> */}
+      {/* <CategoriesSection /> */}
+      {/* <WhyChooseUsSection /> */}
+      {/* <ProductsSection /> */}
+      {/* <DistributorSection /> */}
       <CategoryModal activeCategory={activeCategory} showCategoryOverviewModal={showCategoryOverviewModal} setShowCategoryOverviewModal={setShowCategoryOverviewModal}  />
 
     </div>

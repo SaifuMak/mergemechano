@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 export default function ProductCategories({setActiveCategory,setShowCategoryOverviewModal}) {
+
     const categories = [
         {
             title: 'Dent Puller',
@@ -42,7 +43,7 @@ export default function ProductCategories({setActiveCategory,setShowCategoryOver
                 {categories.map((category, index) => (
                     <div
                         key={index}
-                        onClick={()=>handleCategoryOverview(category.title)}
+                       
                         // className="bg-white rounded-2xl shadow-xl flex items-center justify-between p-6 h-full hover:shadow-2xl transition transform hover:-translate-y-1"
                         className="bg-white rounded-2xl shadow-xl flex items-center transition-all duration-500 ease-in-out justify-between p-6 h-full hover:shadow-2xl "
 
@@ -51,7 +52,7 @@ export default function ProductCategories({setActiveCategory,setShowCategoryOver
                         <div className="flex-1 pr-4">
                             <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
                             <p className="text-gray-600 mb-4 text-sm">{category.description}</p>
-                            <button className="mt-3 text-white text-nowrap bg-black px-4 py-1.5 cursor-pointer rounded-full text-sm">
+                            <button  onClick={()=>handleCategoryOverview(category.title)} className="mt-3 text-white text-nowrap bg-black px-4 py-1.5 cursor-pointer rounded-full text-sm">
                                 {category.buttonText}
                             </button>
                         </div>
