@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function ProductCategories() {
+export default function ProductCategories({setActiveCategory,setShowCategoryOverviewModal}) {
     const categories = [
         {
             title: 'Dent Puller',
@@ -28,6 +28,12 @@ export default function ProductCategories() {
         },
     ];
 
+    const handleCategoryOverview=(category)=>{
+        setActiveCategory(category)
+        setShowCategoryOverviewModal(true)
+        
+    }
+
 
     return (
         <section className="-mt-16 pb-10 px-4 relative z-10">
@@ -36,6 +42,7 @@ export default function ProductCategories() {
                 {categories.map((category, index) => (
                     <div
                         key={index}
+                        onClick={()=>handleCategoryOverview(category.title)}
                         // className="bg-white rounded-2xl shadow-xl flex items-center justify-between p-6 h-full hover:shadow-2xl transition transform hover:-translate-y-1"
                         className="bg-white rounded-2xl shadow-xl flex items-center transition-all duration-500 ease-in-out justify-between p-6 h-full hover:shadow-2xl "
 
@@ -62,6 +69,7 @@ export default function ProductCategories() {
                     </div>
                 ))}
             </div>
+            {/* <div className=" absolute h-screen w-full"></div> */}
         </section>
     )
 }

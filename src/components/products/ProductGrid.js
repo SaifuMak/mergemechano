@@ -3,22 +3,22 @@
 import { useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
 
-export default function ProductGrid() {
-  const [products, setProducts] = useState([])
+export default function ProductGrid({products}) {
+  // const [products, setProducts] = useState([])
 
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const res = await fetch('https://mechano.makseotools.com/api/products/')
-        const data = await res.json()
-        setProducts(data)
-      } catch (error) {
-        console.error('Failed to fetch products:', error)
-      }
-    }
+  // useEffect(() => {
+  //   async function fetchProducts() {
+  //     try {
+  //       const res = await fetch('https://mechano.makseotools.com/api/products/')
+  //       const data = await res.json()
+  //       setProducts(data)
+  //     } catch (error) {
+  //       console.error('Failed to fetch products:', error)
+  //     }
+  //   }
 
-    fetchProducts()
-  }, [])
+  //   fetchProducts()
+  // }, [])
 
   return (
     <section className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
