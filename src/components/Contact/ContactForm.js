@@ -2,13 +2,49 @@
 
 import { useState } from 'react'
 
+//  Input Component
+function TextInput({ id, label, name, type = 'text', value, onChange, required = false }) {
+  return (
+    <div className="space-y-1 w-full">
+      <label htmlFor={id} className="block  font-medium text-gray-700">{label}</label>
+      <input
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full border outline-none border-gray-300 rounded px-2 py-2"
+      />
+    </div>
+  )
+}
+
+// Textarea Component
+function TextareaInput({ id, label, name, value, onChange, required = false }) {
+  return (
+    <div className="space-y-1 w-full">
+      <label htmlFor={id} className="block  font-medium text-gray-700">{label}</label>
+      <textarea
+        id={id}
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        rows="5"
+        className="w-full border border-gray-300 outline-none rounded px-2 py-2"
+      />
+    </div>
+  )
+}
+
 export default function ContactForm() {
   const [form, setForm] = useState({
     name: '',
     email: '',
     phone: '',
     locationState: '',
-    subject: '',
+    // subject: '',
     message: '',
   })
 
@@ -19,6 +55,14 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     alert('Message submitted!')
+    setForm({
+      name: '',
+      email: '',
+      phone: '',
+      locationState: '',
+      // subject: '',
+      message: '',
+    })
     // Optionally connect to API here
   }
 
@@ -29,65 +73,58 @@ export default function ContactForm() {
     >
       <h2 className="text-lg font-bold text-gray-900">Send us a message</h2>
 
-      {/* Name */}
-      <input
+      <TextInput
+        id="name"
+        label="Name"
         name="name"
-        placeholder="Your Name"
-        required
         value={form.name}
         onChange={handleChange}
-        className="w-full border border-gray-300 rounded px-4 py-2"
+        required
       />
 
-      {/* Email + Phone - Responsive Two Column Layout */}
-<div className="flex flex-wrap md:flex-nowrap gap-4">
-  <input
-    name="email"
-    type="email"
-    placeholder="Your Email"
-    required
-    value={form.email}
-    onChange={handleChange}
-    className="w-full md:w-1/2 border border-gray-300 rounded px-4 py-2"
-  />
-  <input
-    name="phone"
-    type="tel"
-    placeholder="Your Phone"
-    value={form.phone}
-    onChange={handleChange}
-    className="w-full md:w-1/2 border border-gray-300 rounded px-4 py-2"
-  />
-</div>
+      <div className="flex flex-wrap md:flex-nowrap gap-4">
+        <TextInput
+          id="email"
+          label="Email"
+          name="email"
+          type="email"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
+        <TextInput
+          id="phone"
+          label="Phone number"
+          name="phone"
+          type="tel"
+          value={form.phone}
+          onChange={handleChange}
+        />
+      </div>
 
-
-      {/* Location + State Combined */}
-      <input
+      <TextInput
+        id="locationState"
+        label="Country "
         name="locationState"
-        placeholder="Your Location & State"
         value={form.locationState}
         onChange={handleChange}
-        className="w-full border border-gray-300 rounded px-4 py-2"
       />
 
-      {/* Subject */}
-      <input
+      {/* <TextInput
+        id="subject"
+        label="Subject"
         name="subject"
-        placeholder="Subject"
         value={form.subject}
         onChange={handleChange}
-        className="w-full border border-gray-300 rounded px-4 py-2"
-      />
+      /> */}
 
-      {/* Message */}
-      <textarea
+      <TextareaInput
+        id="message"
+        label="Message"
         name="message"
-        placeholder="Your Message"
-        required
-        rows="5"
         value={form.message}
         onChange={handleChange}
-        className="w-full border border-gray-300 rounded px-4 py-2"
+        required
       />
 
       <button
