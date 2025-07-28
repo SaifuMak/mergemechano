@@ -10,15 +10,17 @@ import ProductsSection from '@/components/Home/ProductsSection'
 import WhyChooseUsSection from '@/components/Home/WhyChooseUsSection'
 import DistributorSection from '@/components/Home/DistributorSection'
 
+
 import ProductCategories from '@/components/Home/ProductCategories'
 import CategoryModal from '@/components/Home/CategoryModal'
+import Banner from '@/components/Home/Banner'
 
 export default function Home() {
 
   const [showCategoryOverviewModal, setShowCategoryOverviewModal] = useState(false)
   const [activeCategory, setActiveCategory] = useState(null)
 
-   useEffect(() => {
+  useEffect(() => {
     if (showCategoryOverviewModal) {
       document.body.style.overflow = 'hidden'
     } else {
@@ -31,7 +33,8 @@ export default function Home() {
 
   return (
     <div className=''>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <Banner/>
       {/* <FeatureCapsules /> */}
       <ProductCategories setActiveCategory={setActiveCategory} setShowCategoryOverviewModal={setShowCategoryOverviewModal} />
       {/* <AboutSection />
@@ -39,7 +42,7 @@ export default function Home() {
       <WhyChooseUsSection />
       <ProductsSection />
       <DistributorSection /> */}
-      <CategoryModal activeCategory={activeCategory} showCategoryOverviewModal={showCategoryOverviewModal} setShowCategoryOverviewModal={setShowCategoryOverviewModal}  />
+      <CategoryModal activeCategory={activeCategory} showCategoryOverviewModal={showCategoryOverviewModal} setShowCategoryOverviewModal={setShowCategoryOverviewModal} />
 
     </div>
   )
