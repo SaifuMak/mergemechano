@@ -15,11 +15,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white min-h-20 text-black shadow-sm z-50  relative">
+      <header className="bg-white text-black shadow-sm z-50  overflow-hidden  relative">
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4 gap-6">
 
           {/* Logo */}
-          <div className="w-[160px]  ">
+          <div className="w-[160px] min-h-28 bg-red-100  ">
             <Link href="/">
               <Image
                 src="/images/logo.png"
