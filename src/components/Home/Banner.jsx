@@ -14,7 +14,7 @@ export default function Banner() {
     }, []);
 
     return (
-        <section className="relative w-full   overflow-hidden">
+        <section className="relative w-full  min-h-[70vh] overflow-hidden">
             <video
                 ref={videoRef}
                 autoPlay
