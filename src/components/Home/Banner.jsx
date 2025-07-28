@@ -14,7 +14,7 @@ export default function Banner() {
     }, []);
 
     return (
-        <section className="relative w-full  min-h-[70vh] overflow-hidden">
+        <section className="relative w-full   overflow-hidden">
             <video
                 ref={videoRef}
                 autoPlay
@@ -26,7 +26,7 @@ export default function Banner() {
                 <source src="https://res.cloudinary.com/dbmsyy9mx/video/upload/v1753678033/merge_mecano_tbwekt.mp4" type="video/mp4" />
 
             </video>
-            <div className=" absolute w-full h-full inset-0 bg-gradient-to-b from-black/90 to-transparent  "></div>
+            <div className=" absolute w-full h-full inset-0 bg-gradient-to-b from-black/70 to-transparent  "></div>
 
             <div className="relative z-10 max-w-7xl mx-auto  md:mt-6  flex flex-col md:flex-row items-center px-6 py-16 gap-10 text-white">
 
