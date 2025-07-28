@@ -19,7 +19,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4 gap-6">
 
           {/* Logo */}
-          <div className="w-[160px] min-h-20 overflow-hidden  bg-red-50 ">
+          <div className="w-[160px] min-h-20 overflow-hidden  ">
             <Link href="/">
               <Image
                 src="/images/logo.png"
