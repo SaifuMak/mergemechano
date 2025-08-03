@@ -37,8 +37,8 @@ const Activities = [
 
 export default function ExecutionFlow() {
   return (
-    <div className="px-4 md:py-12 md:w-9/12 mx-auto">  
-      <h2 className="text-3xl font-bold text-center mb-10">Our <span className=" text-red-600">Process</span></h2>
+    <div className="px-4 md:py-12 md:w-11/12 lg:w-9/12 mx-auto">  
+      <h2 className="text-3xl font-bold text-center mb-10">Our <span className=" text-red-600">Activities</span></h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {Activities.map((activity, index) => (
           <div
