@@ -40,7 +40,7 @@ export default function ProductDetails({ product }) {
              [&_ul]:mt-3"
         dangerouslySetInnerHTML={{ __html: product.description }}
       />
-      
+
       <Image
         src="/images/products/certifications.jpg"
         alt="About Merge Mechano"
@@ -49,7 +49,7 @@ export default function ProductDetails({ product }) {
         className="w-[420px] overflow-hidden h-32  object-contain border-gray-300 rounded-4xl mb-10"
       />
 
-  
+
       {/* <div className="w-[400px] h-[200px] relative border overflow-hidden rounded-4xl">
         <Image
           src="/images/products/certifications.jpg"
@@ -72,12 +72,12 @@ export default function ProductDetails({ product }) {
         >
           Brochure PDF
         </Link>
-        {/* <Link
-          href="/distributors"
+        <Link
+          href="#"
           className="bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-red-700 transition"
         >
-          Find a Dealer
-        </Link> */}
+          Operating Manual
+        </Link>
       </div>
     </div>
   )

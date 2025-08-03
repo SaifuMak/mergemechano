@@ -38,7 +38,9 @@ export default function DistributorsPage() {
 
   return (
         <main>
-      <DistributorsHeader />
+          <div className="min-h-[70vh]"></div>
+          
+      {/* <DistributorsHeader />
       <div className="max-w-5xl mx-auto px-6 py-16">
       <DistributorsFilter
         search={search}
@@ -48,7 +50,7 @@ export default function DistributorsPage() {
         locations={locations}
       />
       <DistributorsList distributors={filtered} />
-      </div>
+      </div> */}
     </main>
   )
 }
