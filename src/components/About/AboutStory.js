@@ -29,7 +29,7 @@ export default function AboutStory() {
       {/* Image */}
       <div className="mb-8">
         <Image
-          src="/images/about/about-story.jpg" // Replace with your actual image
+          src="/images/gallery/building-2.jpg" // Replace with your actual image
           alt="Our Story"
           width={800}
           height={400}
@@ -38,7 +38,7 @@ export default function AboutStory() {
       </div>
 
       {/* Paragraphs */}
-      <div className="w-1/2 mx-auto space-y-4 text-gray-600 text-base mb-10">
+      <div className="md:w-1/2 max-md:px-2 mx-auto space-y-4 text-gray-600 text-base mb-10">
         <p>
           Founded with a passion for simplifying automobile servicing, Merge Mechano brings together innovation and reliability to workshops across India. What started as a vision to improve everyday garage operations has grown into a trusted brand across the industry.</p>
         <p>
