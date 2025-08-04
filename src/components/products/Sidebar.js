@@ -10,7 +10,7 @@ import { categories } from '@/app/data/categories'
 
 export default function Sidebar({ selectedCategory, page }) {
   return (
-    <aside className="space-y-4">
+    <aside className="space-y-4  hidden ">
       <h2 className="text-xl font-bold text-gray-800 mb-4">Categories</h2>
       <ul className="space-y-2">
         {categories.map((cat, index) => (
