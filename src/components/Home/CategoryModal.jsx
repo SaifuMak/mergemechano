@@ -15,7 +15,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
             slug: 'machines',
             image: '/images/cat1.png',
         },
-        {
+       /* {
             title: 'Accessories',
             slug: 'accessories',
             image: '/images/cat2.png',
@@ -24,7 +24,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
             title: 'Consumables',
             slug: 'consumables',
             image: '/images/cat3.png',
-        },
+        },*/
 
     ];
 
@@ -43,9 +43,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
 
                         <h2 className="text-2xl font-semibold mb-2 text-center">{activeCategory}</h2>
 
-                        <p className="text-center text-gray-600 text-sm mb-6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod.
-                        </p>
+                       
 
                         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                             {subCategories.map((subCategory, index) => (

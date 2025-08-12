@@ -37,9 +37,9 @@ export default function Banner() {
                     <p className="text-lg mb-6 text-white max-w-md font-normal">
                         We offer an assortment of machinery that enhances and enriches you in automobile servicing.
                     </p>
-                    <a href="/products">
+                    <a href="/contact">
                         <button className="text-sm bg-red-600 text-white mb-20 font-medium px-10 py-3 rounded-full hover:bg-red-900 transition">
-                            Explore Products
+                            Contact
                         </button>
                     </a>
                 </div>

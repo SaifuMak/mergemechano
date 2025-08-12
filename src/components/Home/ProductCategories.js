@@ -5,25 +5,25 @@ export default function ProductCategories({setActiveCategory,setShowCategoryOver
     const categories = [
         {
             title: 'Dent Puller',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Efficiently removes dents from vehicle panels without damaging the original paint.',
             buttonText: 'Explore more',
             image: '/images/feature-1.png',
         },
         {
             title: 'Spot Welder',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Delivers precise welding for joining metal sheets in automotive repairs.',
             buttonText: 'Explore more',
             image: '/images/feature-2.png',
         },
         {
-            title: 'Mig Welding',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            title: 'MIG Welding',
+            description: 'Provides strong, clean welds for automotive fabrication and repairs using a wire-feed system.',
             buttonText: 'Explore more',
             image: '/images/feature-3.png',
         },
         {
             title: 'Battery Charger',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Restores and maintains vehicle batteries with reliable, fast charging performance.',
             buttonText: 'Explore more',
             image: '/images/feature-1.png',
         },
