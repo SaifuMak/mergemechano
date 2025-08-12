@@ -21,7 +21,7 @@ export default function ProductGrid({products}) {
   // }, [])
 
   return (
-    <section className="md:col-span-3 grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
   {products.map((product, index) => (
     <ProductCard key={index} product={product} />
   ))}
