@@ -75,12 +75,14 @@ export default function ProductDetails({ product }) {
         </Link>
         )}
 
-        { /* <Link
-          href="#"
+        {product.manual_link && product.manual_link.trim() !== '' && (
+           <Link
+          href={product.manual_link}
           className="bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-red-700 transition"
         >
           Operating Manual
-        </Link> */}
+        </Link> 
+        )}
       </div>
     </div>
   )

@@ -1,4 +1,7 @@
-'use client'
+
+
+
+'use client' 
 
 import { useState, useEffect } from 'react'
 
@@ -14,6 +17,9 @@ import DistributorSection from '@/components/Home/DistributorSection'
 import ProductCategories from '@/components/Home/ProductCategories'
 import CategoryModal from '@/components/Home/CategoryModal'
 import Banner from '@/components/Home/Banner'
+
+
+
 
 export default function Home() {
 
@@ -47,3 +53,9 @@ export default function Home() {
     </div>
   )
 }
+
+
+
+
+
+
