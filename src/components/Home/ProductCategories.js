@@ -25,7 +25,7 @@ export default function ProductCategories({setActiveCategory,setShowCategoryOver
             title: 'Battery Charger',
             description: 'Restores and maintains vehicle batteries with reliable, fast charging performance.',
             buttonText: 'Explore more',
-            image: '/images/feature-1.png',
+            image: '/images/feature-4.png',
         },
     ];
 

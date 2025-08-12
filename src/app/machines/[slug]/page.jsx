@@ -81,7 +81,10 @@ export default function MachinesPage() {
 
     return (
         <main className="min-h-[80vh] transition-all duration-500 ease-in-out">
-            <TitleBanner title="Our Machines" description="Lorem ipsum dolor sit amet consectetur." />
+            <TitleBanner
+      title={category?.name ?? "Our Machines"}
+      description=""
+    />
 
             <div className="max-w-7xl mx-auto px-4 py-16">
                 {isLoading ? (

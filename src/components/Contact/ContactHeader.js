@@ -2,7 +2,8 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/solid'
 
 export default function ContactHeader() {
   return (
-    <section className="relative w-full h-[450px] text-white">
+    <section className="relative w-full lg:h-[450px] h-auto py-8 lg:py-0 text-white">
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

@@ -72,12 +72,12 @@ export default function ProductDetails({ product }) {
         >
           Brochure PDF
         </Link>
-        <Link
+        { /* <Link
           href="#"
           className="bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-red-700 transition"
         >
           Operating Manual
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

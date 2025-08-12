@@ -53,12 +53,12 @@ export default function Header() {
 
           {/* Mobile Icons */}
           <div className="md:hidden flex items-center space-x-4">
-            <button
+          {/*  <button
               onClick={() => setIsSearchOpen(open => !open)}
               aria-label="Toggle Search"
             >
               <MagnifyingGlassIcon className="w-6 h-6 text-gray-700" />
-            </button>
+            </button>*/}
             <button
               onClick={() => setIsMenuOpen(true)}
               aria-label="Open Menu"
