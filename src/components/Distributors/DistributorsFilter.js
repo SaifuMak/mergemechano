@@ -14,7 +14,7 @@ export default function DistributorsFilter({ search, setSearch, location, setLoc
         onChange={e => setLocation(e.target.value)}
         className="border border-gray-300 rounded px-4 py-2"
       >
-        <option value="">All Locations</option>
+        
         {locations.map((loc, i) => (
           <option key={i} value={loc}>
             {loc}

@@ -39,9 +39,13 @@ export default function ContactHeader() {
           <div className="flex items-start gap-3">
             <PhoneIcon className="h-6 w-6 text-red-500" />
             <div>
-              <p className="font-medium text-white">Phone Call</p>
-              <a href="tel:04884234090">04884 234090</a>,{' '}
-              <a href="tel:7736388467">7736388467</a>
+              <p className="font-medium text-white">Support</p>
+              <a href="tel:04884234090">04884 234090</a><br/>{' '}
+              <a href="tel:+91 7736 388 467">+91 7736 388 467</a>{' '}<br/><br/>
+              <p className="font-medium text-white">Service</p>{' '}
+              <a href="tel:+91 8281 940 567">+91 8281 940 567</a>{' '}<br/>
+              <a href="tel:+91 7907 301 632">+91 7907 301 632</a>{' '}<br/>
+              <a href="tel:+91 9946 335 677">+91 9946 335 677</a>
             </div>
           </div>
 
@@ -50,7 +54,9 @@ export default function ContactHeader() {
             <MapPinIcon className="h-6 w-6 text-red-500" />
             <div>
               <p className="font-medium text-white">Find us</p>
+              <a href="https://maps.app.goo.gl/3bX19cCs3jQhnyjQ8" className="text-gray-300 text-sm ">
               <p className="text-gray-300 text-sm">Thrissur, Kerala, India</p>
+              </a>
             </div>
           </div>
         </div>

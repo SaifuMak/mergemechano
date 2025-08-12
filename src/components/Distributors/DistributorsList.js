@@ -1,4 +1,4 @@
-import { MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 
 export default function DistributorsList({ distributors }) {
   if (distributors.length === 0) {
@@ -17,13 +17,24 @@ export default function DistributorsList({ distributors }) {
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             {d.name}
           </h3>
+
           <div className="flex items-center text-sm text-gray-600 gap-2">
             <MapPinIcon className="h-4 w-4 text-red-600" />
-            {d.location}
+            {d.locations.join(', ')}
           </div>
+
           <div className="flex items-center text-sm text-gray-500 mt-2">
             <PhoneIcon className="h-4 w-4 mr-2 text-red-600" />
-            +91 9192 156 657
+            <a href={`tel:${d.phone}`} className="hover:underline">
+              {d.phone}
+            </a>
+          </div>
+
+          <div className="flex items-center text-sm text-gray-500 mt-2">
+            <EnvelopeIcon className="h-4 w-4 mr-2 text-red-600" />
+            <a href={`mailto:${d.email}`} className="hover:underline">
+              {d.email}
+            </a>
           </div>
         </div>
       ))}

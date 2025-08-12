@@ -31,7 +31,7 @@ export default function ContactInfo() {
       {/* Image */}
       <div className="w-full max-w-md">
         <Image
-          src="/images/gallery/staffs.jpg"
+          src="/images/gallery/building-3.jpg"
           alt="Merge Mechano Office"
           width={600}
           height={400}
