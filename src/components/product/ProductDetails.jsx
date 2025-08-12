@@ -65,13 +65,16 @@ export default function ProductDetails({ product }) {
 
       {/* Buttons */}
       <div className="flex gap-4">
+        {product.catalogueUrl && product.catalogueUrl.trim() !== '' && (
         <Link
-          href={product.catalogueUrl || '#'}
+          href={product.catalogueUrl}
           target="_blank"
           className="bg-gray-800 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-gray-900 transition"
         >
           Brochure PDF
         </Link>
+        )}
+
         { /* <Link
           href="#"
           className="bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium hover:bg-red-700 transition"
