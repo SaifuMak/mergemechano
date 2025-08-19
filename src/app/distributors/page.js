@@ -7,37 +7,37 @@ import DistributorsList from '@/components/Distributors/DistributorsList'
 
 const distributors = [
   {
-    name: 'Ravi Gurjjar',
+    name: 'Mr. Ravi Gurjar',
     phone: '9033842981',
     email: 'gurjarravi84@gmail.com',
     locations: ['GUJARAT', 'RAJASTHAN', 'PUNJAB', 'JAMMU AND KASHMIR'],
   },
   {
-    name: 'Sayed',
+    name: 'Mr. Sayed Aftab Ahmed',
     phone: '9110364300',
     email: 'sagarageequipments@gmail.com',
     locations: ['TELANGANA', 'ANDHRA PRADESH', 'ODISHA'],
   },
   {
-    name: 'Arjun',
+    name: 'Mr. Arjun C',
     phone: '8714449998',
     email: 'ecorysolutions@gmail.com',
     locations: ['KERALA', 'KARNATAKA'],
   },
   {
-    name: 'Rithesh',
+    name: 'Mr. Ritesh Chandrakar',
     phone: '9826189800',
     email: 'wingertools@rediffmail.com',
     locations: ['MADHYA PRADESH', 'CHHATTISGARH'],
   },
   {
-    name: 'Khade',
+    name: 'Mr. Dattatray Khade',
     phone: '99970837161',
     email: 'khadedd829@gmail.com',
     locations: ['MAHARASHTRA'],
   },
   {
-    name: 'Vino Jose',
+    name: 'Mr. Vino Jose',
     phone: '00971508856496',
     email: 'vinojose@rediffmail.com',
     locations: ['UAE'],
