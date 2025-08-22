@@ -1,6 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import axios from "axios";
+import { toast } from 'sonner'
+import { FaSpinner } from "react-icons/fa";
 
 //  Input Component
 function TextInput({ id, label, name, type = 'text', value, onChange, required = false }) {
@@ -48,21 +51,46 @@ export default function ContactForm() {
     message: '',
   })
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('Message submitted!')
-    setForm({
-      name: '',
-      email: '',
-      phone: '',
-      locationState: '',
-      // subject: '',
-      message: '',
-    })
+    setLoading(true);
+    try {
+
+      await axios.post(
+        // "http://127.0.0.1:8000/services/send-email/",
+        "https://mechano.makseotools.com/services/send-email/",
+
+        
+        form,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      setForm({
+        name: '',
+        email: '',
+        phone: '',
+        locationState: '',
+        // subject: '',
+        message: '',
+      })
+      toast.success("Message delivered successfully")
+    } catch (error) {
+      toast.error('Something went wrong')
+    }
+    finally {
+      setLoading(false)
+    }
+
     // Optionally connect to API here
   }
 
@@ -129,9 +157,14 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800 transition"
+        disabled={loading}
+        className="bg-red-700 text-white px-6 cursor-pointer  text-nowrap  py-2 h-10 rounded hover:bg-red-800 transition flex items-center justify-center w-40" // fixed width
       >
-        Send Message
+        {loading ? (
+          <FaSpinner className="animate-spin text-white text-lg" />
+        ) : (
+          "Send Message"
+        )}
       </button>
     </form>
   )

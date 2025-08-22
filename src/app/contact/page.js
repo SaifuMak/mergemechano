@@ -2,6 +2,7 @@ import ContactHeader from '@/components/Contact/ContactHeader'
 import ContactInfo from '@/components/Contact/ContactInfo'
 import ContactForm from '@/components/Contact/ContactForm'
 import MapSection from '@/components/Contact/MapSection'
+import { Toaster } from 'sonner'
 
 export default function ContactPage() {
   return (
@@ -12,6 +13,7 @@ export default function ContactPage() {
         <ContactForm />
       </section>
       <MapSection />
+       <Toaster richColors position="bottom-right" />
     </main>
   )
 }
