@@ -16,6 +16,7 @@ const galleryImages = [
   '/images/gallery/building-2.jpg',
   '/images/gallery/building-4.jpg',
   '/images/gallery/building-6.jpg',
+  '/images/gallery/mergemechano-front.jpg',
 ]
 
 export default function Gallery() {
