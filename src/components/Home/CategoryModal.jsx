@@ -7,8 +7,8 @@ import { categories } from '@/app/data/categories';
 const subCategoryImages = {
   'dent-puller': {
     machines: '/images/feature-1.png',
-    accessories: '/images/categories/dent-puller/accessories.png',
-    consumables: '/images/categories/dent-puller/consumables.png', 
+    accessories: '/images/products/dent-accessories/clawjaw-hammer-icon.png',
+    consumables: '/images/products/dent-consumables/round-washer-icon.png', 
   },
   'spot-welder': {
     machines: '/images/feature-2.png',
@@ -35,13 +35,20 @@ const defaultImages = {
 };
 
 const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCategoryOverviewModal }) => {
+  const normalizedActive = activeCategory?.toLowerCase().trim();
   const category = categories.find(
-    (cat) => cat?.name.toLowerCase().trim() === activeCategory?.toLowerCase().trim()
+    (cat) => cat?.name.toLowerCase().trim() === normalizedActive
   );
   const categorySlug = category ? category.slug : '#';
 
-  { /* const subCategories = ['Machines', 'Accessories', 'Consumables'].map((title) => { */ }
-    const subCategories = ['Machines'].map((title) => {
+  // show extra tabs only for dent-puller
+  const wantsExtras = categorySlug === 'dent-puller';
+
+  const titles = wantsExtras
+    ? ['Machines', 'Accessories', 'Consumables']
+    : ['Machines'];
+
+  const subCategories = titles.map((title) => {
     const key = title.toLowerCase(); // 'machines' | 'accessories' | 'consumables'
     const img =
       (categorySlug && subCategoryImages[categorySlug]?.[key]) ||
@@ -49,10 +56,22 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
 
     return {
       title,
-      slug: key, // routes like /machines/<category>, /accessories/<category>, /consumables/<category>
+      slug: key, // routes like /machines/<category>, etc.
       image: img,
     };
   });
+
+  // inside CategoryModal.jsx (above the return)
+function getSubcategoryHref(subSlug, categorySlug) {
+  if (categorySlug === 'dent-puller') {
+    if (subSlug === 'accessories') return '/dent-puller-accessories';
+    if (subSlug === 'consumables') return '/dent-puller-consumables';
+  }
+  return `/${subSlug}/${categorySlug}`;
+}
+
+
+  
 
   return (
     <>
@@ -78,10 +97,10 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               {subCategories.map((subCategory, index) => (
                 <Link
-                  key={index}
-                  href={`/${subCategory.slug}/${categorySlug}`}
-                  className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-xl transition-all duration-500 ease-in-out text-center block"
-                >
+  key={index}
+  href={getSubcategoryHref(subCategory.slug, categorySlug)}
+  className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-xl transition-all duration-500 ease-in-out text-center block"
+>
                   <div className="relative w-full h-auto mb-6">
                     <Image
                       src={subCategory.image}
