@@ -41,14 +41,9 @@ export default function ProductsPage() {
     images: ["/images/products/dent-accessories/suctionpad.jpg"]
   },
   {
-    name: "Sliding Hammer",
+    name: "Long & Twisted Washer Holder",
     slug: "",
-    images: ["/images/products/dent-accessories/sliding-hammer.jpg"]
-  },
-  {
-    name: "Body Straightner",
-    slug: "",
-    images: ["/images/products/dent-accessories/body-straightner.jpg"]
+    images: ["/images/products/dent-accessories/twisted-Long-washer-with-holder.jpg"]
   }
 ]
 
@@ -56,8 +51,8 @@ export default function ProductsPage() {
   return (
     <main className="min-h-[80vh] transition-all duration-500 ease-in-out">
       <TitleBanner
-        title="Dent Puller Accessories"
-        description="Browse our range of accessories for dent puller."
+        title="Spot Welder Accessories"
+        description="Browse our range of accessories for Spot Welder."
       />
       <div className="max-w-7xl mx-auto px-4 py-16">
         <ProductGrid products={products} />
