@@ -35,7 +35,8 @@ export default function ProductsPage() {
     slug: "",
     images: ["/images/products/dent-consumables/zigzag-wire.jpg"]
   }
-]
+] 
+
 
 
 
