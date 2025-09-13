@@ -41,6 +41,11 @@ export default function ProductsPage() {
     images: ["/images/products/dent-accessories/suctionpad.jpg"]
   },
   {
+    name: "Long & Twisted Washer Holder",
+    slug: "",
+    images: ["/images/products/dent-accessories/twisted-Long-washer-with-holder.jpg"]
+  },
+  {
     name: "Sliding Hammer",
     slug: "",
     images: ["/images/products/dent-accessories/sliding-hammer.jpg"]
