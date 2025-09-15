@@ -12,8 +12,8 @@ const subCategoryImages = {
   },
   'spot-welder': {
     machines: '/images/feature-2.png',
-    accessories: '/images/categories/spot-welder/accessories.png',
-    consumables: '/images/categories/spot-welder/consumables.png', 
+    accessories: '/images/products/dent-accessories/suctionpad.png',
+    consumables: '/images/products/dent-consumables/triangle-tip.png', 
   },
   'mig-welding': {
     machines: '/images/feature-3.png',
@@ -42,7 +42,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
   const categorySlug = category ? category.slug : '#';
 
   // show extra tabs only for dent-puller
-  const wantsExtras = categorySlug === 'dent-puller';
+  const wantsExtras = categorySlug === 'dent-puller' || categorySlug === 'spot-welder';
 
   const titles = wantsExtras
     ? ['Machines', 'Accessories', 'Consumables']
@@ -61,14 +61,19 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
     };
   });
 
-  // inside CategoryModal.jsx (above the return)
-function getSubcategoryHref(subSlug, categorySlug) {
-  if (categorySlug === 'dent-puller') {
-    if (subSlug === 'accessories') return '/dent-puller-accessories';
-    if (subSlug === 'consumables') return '/dent-puller-consumables';
+
+  function getSubcategoryHref(subSlug, categorySlug) {
+    if (categorySlug === 'dent-puller') {
+      if (subSlug === 'accessories') return '/dent-puller-accessories';
+      if (subSlug === 'consumables') return '/dent-puller-consumables';
+    }
+    if (categorySlug === 'spot-welder') {
+      if (subSlug === 'accessories') return '/spot-welder-accessories';
+      if (subSlug === 'consumables') return '/spot-welder-consumables';
+    }
+    return `/${subSlug}/${categorySlug}`;
   }
-  return `/${subSlug}/${categorySlug}`;
-}
+
 
 
   
