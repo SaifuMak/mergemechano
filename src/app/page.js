@@ -4,21 +4,16 @@
 'use client' 
 
 import { useState, useEffect } from 'react'
-
-import HeroSection from '@/components/Home/HeroSection'
-import FeatureCapsules from '@/components/Home/FeatureCapsules'
-import AboutSection from '@/components/Home/AboutSection'
-import CategoriesSection from '@/components/Home/CategoriesSection'
-import ProductsSection from '@/components/Home/ProductsSection'
-import WhyChooseUsSection from '@/components/Home/WhyChooseUsSection'
-import DistributorSection from '@/components/Home/DistributorSection'
-
-
+// import HeroSection from '@/components/Home/HeroSection'
+// import FeatureCapsules from '@/components/Home/FeatureCapsules'
+// import AboutSection from '@/components/Home/AboutSection'
+// import CategoriesSection from '@/components/Home/CategoriesSection'
+// import ProductsSection from '@/components/Home/ProductsSection'
+// import WhyChooseUsSection from '@/components/Home/WhyChooseUsSection'
+// import DistributorSection from '@/components/Home/DistributorSection'
 import ProductCategories from '@/components/Home/ProductCategories'
 import CategoryModal from '@/components/Home/CategoryModal'
 import Banner from '@/components/Home/Banner'
-
-
 
 
 export default function Home() {
