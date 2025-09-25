@@ -23,7 +23,7 @@ export default function Banner() {
                 playsInline
                 className="absolute top-0 left-0 w-full h-full object-cover z-0"
             >
-                <source src="https://res.cloudinary.com/dbmsyy9mx/video/upload/v1753678033/merge_mecano_tbwekt.mp4" type="video/mp4" />
+                <source src="https://pub-f38673b8a6894c218ac2ffe8b02eb47d.r2.dev/merge_mecano_tbwekt.mp4" type="video/mp4" />
 
             </video>
             <div className=" absolute w-full h-full inset-0 bg-gradient-to-b from-black/70 to-transparent  "></div>
