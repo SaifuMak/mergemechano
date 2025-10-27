@@ -5,7 +5,6 @@ import axios from "axios";
 import { toast } from 'sonner'
 import { FaSpinner } from "react-icons/fa";
 
-//  Input Component
 function TextInput({ id, label, name, type = 'text', value, onChange, required = false }) {
   return (
     <div className="space-y-1 w-full">
@@ -90,7 +89,6 @@ export default function ContactForm() {
       setLoading(false)
     }
 
-    // Optionally connect to API here
   }
 
   return (
