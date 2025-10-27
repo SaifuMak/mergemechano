@@ -62,10 +62,10 @@ export default function ContactForm() {
     setLoading(true);
     try {
 
-      await axios.post(
+    const response =   await axios.post(
         // "http://127.0.0.1:8000/services/send-email/",
-        "https://mechano.makseotools.com/services/send-email/",
-
+        // "https://mechano.makseotools.com/services/send-email/",
+        "https://startup.sembytes.com/email-service/mergemechano-contact/",
         
         form,
         {
@@ -83,7 +83,7 @@ export default function ContactForm() {
         // subject: '',
         message: '',
       })
-      toast.success("Message delivered successfully")
+      toast.success(response.data.message)
     } catch (error) {
       toast.error('Something went wrong')
     }
@@ -127,6 +127,7 @@ export default function ContactForm() {
           type="tel"
           value={form.phone}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -136,6 +137,7 @@ export default function ContactForm() {
         name="locationState"
         value={form.locationState}
         onChange={handleChange}
+        required
       />
 
       {/* <TextInput
