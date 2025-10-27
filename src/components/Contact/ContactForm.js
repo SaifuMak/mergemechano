@@ -63,7 +63,6 @@ export default function ContactForm() {
     try {
 
     const response =   await axios.post(
-        // "http://127.0.0.1:8000/services/send-email/",
         // "https://mechano.makseotools.com/services/send-email/",
         "https://startup.sembytes.com/email-service/mergemechano-contact/",
         
