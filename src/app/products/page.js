@@ -2,7 +2,6 @@ import TitleBanner from '@/components/products/TitleBanner'
 import Sidebar from '@/components/products/Sidebar'
 import ProductGrid from '@/components/products/ProductGrid'
 
-
 export default function ProductsPage() {
   return (
     <main>

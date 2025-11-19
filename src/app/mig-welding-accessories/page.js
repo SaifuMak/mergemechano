@@ -19,6 +19,11 @@ export default function ProductsPage() {
     slug: "",
     images: ["/images/products/mig-accessories/co2-flow-meter.jpg"]
   },
+  {
+    name: "SPOOL 5 kg",
+    slug: "",
+    images: ["/images/products/mig-accessories/spool.JPG"]
+  },
  
 ]
 

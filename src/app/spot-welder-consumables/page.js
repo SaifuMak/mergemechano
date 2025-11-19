@@ -1,4 +1,3 @@
-// app/dent-puller-accessories/page.js
 import TitleBanner from '@/components/products/TitleBanner'
 import ProductGrid from '@/components/products/ProductGrid'
 
