@@ -3,7 +3,6 @@ import TitleBanner from '@/components/products/TitleBanner'
 import ProductGrid from '@/components/products/ProductGrid'
 
 export default function ProductsPage() {
-  // Dummy data (8 products)
   const products = [
   {
     name: "Carbon Rod",
