@@ -7,9 +7,6 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 
-
-
-
 export default function ProductPage() {
   const { slug } = useParams()
   const [product, setProduct] = useState(null)

@@ -37,10 +37,6 @@ export default function ProductsPage() {
   }
 ] 
 
-
-
-
-
   return (
     <main className="min-h-[80vh] transition-all duration-500 ease-in-out">
       <TitleBanner

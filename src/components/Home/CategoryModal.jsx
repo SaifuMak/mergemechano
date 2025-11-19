@@ -17,8 +17,8 @@ const subCategoryImages = {
   },
   'mig-welding': {
     machines: '/images/feature-3.png',
-    accessories: '/images/categories/mig-welding/accessories.png',
-    consumables: '/images/categories/mig-welding/consumables.png', 
+    accessories: '/images/products/mig-accessories/welding-torch.jpg',
+    consumables: '/images/products/mig-consumables/nozzle-gel.jpg', 
   },
     'battery-charger': {
     machines: '/images/feature-4.png',
@@ -42,7 +42,7 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
   const categorySlug = category ? category.slug : '#';
 
   // show extra tabs only for dent-puller
-  const wantsExtras = categorySlug === 'dent-puller' || categorySlug === 'spot-welder';
+  const wantsExtras = categorySlug === 'dent-puller' || categorySlug === 'spot-welder' || categorySlug === 'mig-welding';
 
   const titles = wantsExtras
     ? ['Machines', 'Accessories', 'Consumables']
@@ -71,10 +71,12 @@ const CategoryModal = ({ activeCategory, showCategoryOverviewModal, setShowCateg
       if (subSlug === 'accessories') return '/spot-welder-accessories';
       if (subSlug === 'consumables') return '/spot-welder-consumables';
     }
+     if (categorySlug === 'mig-welding') {
+      if (subSlug === 'accessories') return '/mig-welding-accessories';
+      if (subSlug === 'consumables') return '/mig-welding-consumables';
+    }
     return `/${subSlug}/${categorySlug}`;
   }
-
-
 
   
 
