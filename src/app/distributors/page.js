@@ -42,7 +42,14 @@ const distributors = [
     email: 'vinojose@rediffmail.com',
     locations: ['UAE'],
   },
+  {
+    name: 'Mr. JEHANGIR ALAM BHAT',
+    phone: '9419507117',
+    email: 'countrysideharwan@gmail.com',
+    locations: ['JAMMU AND KASHMIR'],
+  },
 ]
+
 
 export default function DistributorsPage() {
   const [search, setSearch] = useState('')
@@ -64,6 +71,7 @@ export default function DistributorsPage() {
       return nameMatch && locMatch
     })
   }, [search, location])
+
 
   return (
     <main>
