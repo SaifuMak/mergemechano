@@ -43,7 +43,7 @@ const distributors = [
     locations: ['UAE'],
   },
   {
-    name: 'Mr. JEHANGIR ALAM BHAT',
+    name: 'Mr. Jehangir Alam Bhat',
     phone: '9419507117',
     email: 'countrysideharwan@gmail.com',
     locations: ['JAMMU AND KASHMIR'],
