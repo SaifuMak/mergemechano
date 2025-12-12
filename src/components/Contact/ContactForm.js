@@ -56,6 +56,7 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true);
@@ -63,7 +64,7 @@ export default function ContactForm() {
 
     const response =   await axios.post(
         // "https://mechano.makseotools.com/services/send-email/",
-        "https://api.startupsite.io/email-service/mergemechano-contact/",
+        "https://test-api.startupsite.io/email-service/mergemechano-contact/",
         
         form,
         {
